@@ -1,13 +1,18 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Image Processor</title>
+    <meta charset="UTF-8">
+    <title>Image Processor - Home</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Upload Image</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" required>
-        <button type="submit">Upload & Process</button>
-    </form>
+    <div class="container">
+        <h1>Welcome to the Image Processor</h1>
+        <p>Convert and compress your images easily.</p>
+        <a href="/upload" class="main-btn">Convert Your Image</a>
+        <a href="/resize" class="main-btn">Resize Image</a>
+        <a href="/video" class="main-btn">Video to Images</a>
+    </div>
 </body>
 </html>

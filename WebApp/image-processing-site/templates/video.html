@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Video to Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🎞️ Convert Video to Images</h1>
+    
+    <form id="video-form" action="{{ url_for('video') }}" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="file" id="fileElem" accept="video/*" name="video" style="display:none">
+        <div id="drop-area">
+            <p>Drag & drop video here or click to upload</p>
+            <p class="file-restrictions">(MP4, AVI, MOV, MKV • Max 50MB)</p>
+        </div>
+        <div id="preview"></div>
+        <div class="video-options">
+            <label>Frames per second: 
+                <input type="number" name="fps" value="1" min="1" max="60" required>
+            </label>
+        </div>
+        <button class="upload-btn" type="submit">Convert Video</button>
+    </form>
+
+    <script>
+        const dropArea = document.getElementById('drop-area');
+        const fileElem = document.getElementById('fileElem');
+        const preview = document.getElementById('preview');
+        let currentFile = null;
+
+        // Event Handlers
+        dropArea.addEventListener('click', () => fileElem.click());
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight);
+        });
+
+        dropArea.addEventListener('drop', handleDrop);
+        fileElem.addEventListener('change', handleFileSelect);
+
+        function highlight(e) {
+            e.preventDefault();
+            dropArea.classList.add('highlight');
+        }
+
+        function unhighlight(e) {
+            e.preventDefault();
+            dropArea.classList.remove('highlight');
+        }
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            handleFiles(dt.files);
+        }
+
+        function handleFileSelect(e) {
+            handleFiles(e.target.files);
+        }
+
+        function handleFiles(files) {
+            preview.innerHTML = '';
+            if (files.length > 0) {
+                const file = files[0];
+                if (isValidVideoFile(file)) {
+                    currentFile = file;
+                    previewFile(file);
+                } else {
+                    alert('Please upload a valid video file (MP4, AVI, MOV, MKV)');
+                }
+            }
+        }
+
+        function isValidVideoFile(file) {
+            const allowedTypes = ['video/mp4', 'video/avi', 'video/quicktime', 'video/x-matroska'];
+            const allowedExtensions = ['mp4', 'avi', 'mov', 'mkv'];
+            const extension = file.name.split('.').pop().toLowerCase();
+            
+            return allowedExtensions.includes(extension) && 
+                   allowedTypes.some(type => file.type.includes(type));
+        }
+
+        function previewFile(file) {
+            preview.innerHTML = `
+                <div class="preview-item">
+                    <div class="file-info">
+                        <span>${file.name}</span>
+                        <button class="remove-btn" onclick="removeFile()">&times;</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function removeFile() {
+            preview.innerHTML = '';
+            fileElem.value = '';
+            currentFile = null;
+        }
+
+        // Form validation
+        document.getElementById('video-form').addEventListener('submit', function(e) {
+            if (!currentFile) {
+                e.preventDefault();
+                alert('Please select a video file first!');
+            }
+        });
+    </script>
+    <div class="loading-spinner"></div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            document.querySelector('.loading-spinner').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
