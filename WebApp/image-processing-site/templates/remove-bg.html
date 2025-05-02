@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video to Frames - ImagePro</title>
+    <title>Remove Background - ImagePro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,7 +11,7 @@
     <div class="tool-container">
         <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
         
-        <h1><i class="fas fa-film"></i> Video to Images</h1>
+        <h1><i class="fas fa-cut"></i> Remove Image Background</h1>
         
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -25,34 +25,48 @@
             {% endif %}
         {% endwith %}
         
-        <form id="video-form" action="{{ url_for('video') }}" method="POST" enctype="multipart/form-data">
+        <form id="remove-bg-form" action="{{ url_for('remove_bg') }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-            <input type="file" id="fileElem" accept="video/*" name="video" style="display:none">
+            <input type="file" id="fileElem" accept="image/*" name="image" style="display:none">
             <div id="drop-area">
                 <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                <p>Drag & drop video here or <span style="color: var(--primary-color); font-weight: 600;">click to upload</span></p>
-                <p class="file-restrictions">Supports MP4, AVI, MOV, MKV • Max 50MB</p>
+                <p>Drag & drop image here or <span style="color: var(--primary-color); font-weight: 600;">click to upload</span></p>
+                <p class="file-restrictions">Supports JPG, JPEG, PNG, WebP</p>
             </div>
             
             <div id="preview"></div>
             
-            <div class="video-options">
-                <h3><i class="fas fa-sliders-h"></i> Extraction Options</h3>
+            <div class="resize-options">
+                <h3><i class="fas fa-sliders-h"></i> Output Options</h3>
                 
-                <label>
-                    Frames per Second (FPS)
-                    <div class="input-with-icon">
-                        <input type="number" name="fps" value="1" min="1" max="60" required>
-                        <span class="input-addon">fps</span>
-                    </div>
+                <label style="margin-top: 15px;">
+                    Output Format
+                    <select name="format">
+                        <option value="png">PNG (with transparency)</option>
+                        <option value="jpg">JPEG (white background)</option>
+                        <option value="webp">WebP (best compression)</option>
+                    </select>
                 </label>
                 
+                <div class="feature-explainer">
+                    <div class="explainer-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="explainer-content">
+                        <h4>How Background Removal Works</h4>
+                        <p>
+                            Our AI algorithm automatically detects and removes the background from your image,
+                            creating a clean cutout of the main subject with transparency.
+                        </p>
+                    </div>
+                </div>
+                
                 <p class="description">
-                    <i class="fas fa-info-circle"></i> Extract frames from your video at your desired frame rate. Lower FPS values will extract fewer frames.
+                    <i class="fas fa-info-circle"></i> Best results with clear subjects and contrasting backgrounds. For optimal quality, use PNG format to preserve transparency.
                 </p>
             </div>
             
-            <button class="upload-btn" type="submit"><i class="fas fa-film"></i> Extract Frames</button>
+            <button class="upload-btn" type="submit"><i class="fas fa-cut"></i> Remove Background</button>
         </form>
     </div>
     
@@ -62,7 +76,7 @@
             <div class="progress-bar" id="progress-bar"></div>
         </div>
         <div class="progress-percent" id="progress-percent">0%</div>
-        <div class="loading-text">Processing your video...</div>
+        <div class="loading-text">Processing your image...</div>
     </div>
 
     <script>
@@ -83,11 +97,11 @@
             progressPercent.textContent = '0%';
             
             const interval = setInterval(function() {
-                // Video processing typically takes longer, so slower simulation
-                if (width < 30) {
-                    width += 0.3;
-                } else if (width < 70) {
-                    width += 0.6;
+                // Background removal can take longer, especially first time when model is downloaded
+                if (width < 20) {
+                    width += 0.2;
+                } else if (width < 50) {
+                    width += 0.4;
                 } else if (width < maxWidth) {
                     width += 0.1;
                 } else {
@@ -98,7 +112,7 @@
                     progressBar.style.width = width + '%';
                     progressPercent.textContent = Math.round(width) + '%';
                 }
-            }, 150);
+            }, 200);
             
             return interval;
         }
@@ -144,37 +158,30 @@
 
         function handleFiles(files) {
             preview.innerHTML = '';
-            if (files.length > 0) {
-                const file = files[0];
-                if (isValidVideoFile(file)) {
-                    currentFile = file;
-                    fileElem.files = files; // Ensure the file input has the file
-                    previewFile(file);
-                } else {
-                    alert('Please upload a valid video file (MP4, AVI, MOV, MKV)');
-                }
+            if (files.length > 0 && files[0].type.startsWith('image/')) {
+                currentFile = files[0];
+                fileElem.files = files; // Ensure the file input has the file
+                previewFile(currentFile);
+            } else {
+                alert('Please upload a valid image file');
             }
         }
 
-        function isValidVideoFile(file) {
-            const allowedTypes = ['video/mp4', 'video/avi', 'video/quicktime', 'video/x-matroska'];
-            const allowedExtensions = ['mp4', 'avi', 'mov', 'mkv'];
-            const extension = file.name.split('.').pop().toLowerCase();
-            
-            return allowedExtensions.includes(extension) && 
-                   allowedTypes.some(type => file.type.includes(type));
-        }
-
         function previewFile(file) {
-            preview.innerHTML = `
-                <div class="preview-item">
-                    <div class="file-info">
-                        <span><i class="fas fa-file-video"></i> ${file.name}</span>
-                        <span>${formatFileSize(file.size)}</span>
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.innerHTML = `
+                    <div class="preview-item">
+                        <img src="${e.target.result}" alt="${file.name}">
+                        <button type="button" class="remove-btn" onclick="removeFile()"><i class="fas fa-times"></i></button>
+                        <div class="file-info">
+                            <span><i class="fas fa-file-image"></i> ${file.name}</span>
+                            <span>${formatFileSize(file.size)}</span>
+                        </div>
                     </div>
-                    <button type="button" class="remove-btn" onclick="removeFile()"><i class="fas fa-times"></i></button>
-                </div>
-            `;
+                `;
+            };
+            reader.readAsDataURL(file);
         }
         
         function formatFileSize(bytes) {
@@ -190,10 +197,10 @@
         }
 
         // Form validation
-        document.getElementById('video-form').addEventListener('submit', function(e) {
+        document.getElementById('remove-bg-form').addEventListener('submit', function(e) {
             if (!currentFile) {
                 e.preventDefault();
-                alert('Please select a video file first!');
+                alert('Please select an image first');
                 return false;
             }
             
@@ -213,4 +220,4 @@
         });
     </script>
 </body>
-</html>
+</html> 

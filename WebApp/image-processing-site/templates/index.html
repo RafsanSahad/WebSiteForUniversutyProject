@@ -3,16 +3,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Image Processor - Home</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online image and video processing tools including image conversion, resizing, and video frame extraction">
+    <meta name="keywords" content="image processing, video frames, resize image, frame interpolation">
+    <meta name="author" content="ImagePro">
+    <meta name="theme-color" content="#3a6df0">
+    
+    <title>ImagePro - Advanced Image & Video Processing</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='favicon.svg') }}">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Preconnect to CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Image Processor</h1>
-        <p>Convert and compress your images easily.</p>
-        <a href="/upload" class="main-btn">Convert Your Image</a>
-        <a href="/resize" class="main-btn">Resize Image</a>
-        <a href="/video" class="main-btn">Video to Images</a>
+    <div class="hero">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-photo-film"></i></span>
+                    <h1>ImagePro</h1>
+                </div>
+                <p class="tagline">Advanced Image & Video Processing Tools</p>
+            </header>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="card-icon"><i class="fas fa-compress-alt"></i></div>
+                    <h3>Convert Images</h3>
+                    <p>Optimize and convert your images to JPEG format with quality compression</p>
+                    <a href="/upload" class="card-btn">Convert <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-icon"><i class="fas fa-crop-alt"></i></div>
+                    <h3>Resize Images</h3>
+                    <p>Change image dimensions and convert to different formats (JPEG, PNG, WebP)</p>
+                    <a href="/resize" class="card-btn">Resize <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Remove Background</h3>
+                    <p>Automatically remove image backgrounds with AI technology</p>
+                    <a href="/remove-bg" class="card-btn">Remove BG <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-icon"><i class="fas fa-film"></i></div>
+                    <h3>Video to Frames</h3>
+                    <p>Extract individual frames from video files at your desired frame rate</p>
+                    <a href="/video-ui" class="card-btn">Extract <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="card-icon"><i class="fas fa-sliders-h"></i></div>
+                    <h3>Frame Interpolation</h3>
+                    <p>Increase video frame rate by generating intermediate frames</p>
+                    <a href="/interpolate-ui" class="card-btn">Interpolate <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <footer>
+                <p>Fast, secure, and free image and video processing tools</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <p class="copyright">© 2025 ImagePro</p>
+            </footer>
+        </div>
     </div>
+    
+    <script>
+        // Add animation to cards on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate-in');
+                }, 100 * index);
+            });
+        });
+    </script>
 </body>
 </html>

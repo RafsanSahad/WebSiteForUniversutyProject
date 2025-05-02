@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>🖼️ Convert Your Images</h1>
+    <h1><i class="fas fa-compress-alt"></i> Convert Images</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="messages">
+                {% for category, message in messages %}
+                    <div class="message {{ category }}">
+                        <i class="fas fa-info-circle"></i> {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
 
     <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-        <input type="file" id="fileElem" multiple accept="image/*" style="display:none" name="images">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input type="file" id="fileElem" accept="image/*" name="images" multiple style="display:none">
         <div id="drop-area">
             <p>Drag & drop images here or click to upload</p>
             <p class="file-restrictions">(Max 50MB • JPG, PNG, WEBP, HEIC)</p>
@@ -21,7 +33,53 @@
         <button class="upload-btn" type="submit">Upload & Convert</button>
     </form>
 
+    <div class="loading-spinner">
+        <div class="spinner"></div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="progress-percent" id="progress-percent">0%</div>
+        <div class="loading-text">Processing your images...</div>
+    </div>
+
     <script>
+        // Make sure loading spinner is hidden on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.loading-spinner').style.display = 'none';
+        });
+
+        // Simulate progress for the progress bar
+        function simulateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercent = document.getElementById('progress-percent');
+            let width = 0;
+            const maxWidth = 90; // Only go to 90% with simulation, final completion happens when response returns
+            
+            // Reset progress
+            progressBar.style.width = '0%';
+            progressPercent.textContent = '0%';
+            
+            const interval = setInterval(function() {
+                // Progress simulation for batch image processing
+                if (width < 20) {
+                    width += 0.5;
+                } else if (width < 70) {
+                    width += 0.7;
+                } else if (width < maxWidth) {
+                    width += 0.2;
+                } else {
+                    clearInterval(interval);
+                }
+                
+                if (width <= maxWidth) {
+                    progressBar.style.width = width + '%';
+                    progressPercent.textContent = Math.round(width) + '%';
+                }
+            }, 120);
+            
+            return interval;
+        }
+
         const dropArea = document.getElementById('drop-area');
         const fileElem = document.getElementById('fileElem');
         const preview = document.getElementById('preview');
@@ -113,16 +171,13 @@
             if (uploadedFiles.length === 0) {
                 e.preventDefault();
                 alert('Please select at least one image to upload!');
+                return false;
             }
-        });
-        
-        
-    </script>
-    <div class="loading-spinner"></div>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function() {
-            document.querySelector('.loading-spinner').style.display = 'block';
+            
+            // Show loading spinner and start progress simulation
+            document.querySelector('.loading-spinner').style.display = 'flex';
+            simulateProgress();
+            return true;
         });
     </script>
 </body>

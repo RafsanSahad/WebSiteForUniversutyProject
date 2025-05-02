@@ -1,0 +1,318 @@
+2025-05-03 02:12:13,252 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-05-03 02:12:13,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:12:16,725 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:16] "GET / HTTP/1.1" 200 -
+2025-05-03 02:12:16,862 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:12:17,989 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:17] "[31m[1mGET /resize HTTP/1.1[0m" 405 -
+2025-05-03 02:12:25,257 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:25] "[31m[1mGET /video HTTP/1.1[0m" 405 -
+2025-05-03 02:12:35,903 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:35] "GET / HTTP/1.1" 200 -
+2025-05-03 02:12:36,024 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:12:36,845 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:12:36] "[33mGET /upload HTTP/1.1[0m" 404 -
+2025-05-03 02:14:27,356 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-05-03 02:14:27,357 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:14:33,725 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:33] "GET / HTTP/1.1" 200 -
+2025-05-03 02:14:33,869 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:14:36,068 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:36] "GET /upload HTTP/1.1" 200 -
+2025-05-03 02:14:36,155 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:14:39,297 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:39] "[33mGET /resize.html HTTP/1.1[0m" 404 -
+2025-05-03 02:14:42,743 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:42] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:14:42,838 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:14:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:15:00,111 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:15:00] "[32mPOST /video HTTP/1.1[0m" 302 -
+2025-05-03 02:15:00,147 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:15:00] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:15:00,228 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:15:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:15:12,774 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:15:12] "GET /upload HTTP/1.1" 200 -
+2025-05-03 02:15:12,850 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:15:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:15:30,280 - processor - INFO - Successfully processed: DALLE_2024-11-03_10.52.06_-_A_digital_illustration_showing_a_transformation_from_an_animator_to_a_coder._On_the_left_side_a_character_dressed_like_an_artist_with_a_tablet_and_s.webp
+2025-05-03 02:15:30,308 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:15:30] "POST /upload HTTP/1.1" 200 -
+2025-05-03 02:17:39,722 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-05-03 02:17:39,723 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:17:52,331 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:17:52] "GET / HTTP/1.1" 200 -
+2025-05-03 02:17:52,484 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:17:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:17:53,647 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:17:53] "GET /resize HTTP/1.1" 200 -
+2025-05-03 02:17:53,725 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:17:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:18:09,249 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:18:09] "[32mPOST /resize HTTP/1.1[0m" 302 -
+2025-05-03 02:18:09,288 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:18:09] "GET /resize.html HTTP/1.1" 200 -
+2025-05-03 02:18:09,361 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:18:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:23:49,056 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.111:8080
+2025-05-03 02:23:49,056 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:23:57,160 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:23:57] "GET / HTTP/1.1" 200 -
+2025-05-03 02:23:57,245 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:23:57] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-03 02:23:57,432 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:23:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-03 02:23:59,912 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:23:59] "GET /resize HTTP/1.1" 200 -
+2025-05-03 02:23:59,996 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:23:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:24:14,847 - app - INFO - Resize POST request received
+2025-05-03 02:24:14,849 - app - WARNING - Empty filename in request
+2025-05-03 02:24:14,850 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:14] "[32mPOST /resize HTTP/1.1[0m" 302 -
+2025-05-03 02:24:14,882 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:14] "GET /resize.html HTTP/1.1" 200 -
+2025-05-03 02:24:14,965 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:24:21,748 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:21] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:24:21,866 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:24:30,038 - app - INFO - Video POST request received
+2025-05-03 02:24:30,040 - app - WARNING - Empty filename in request
+2025-05-03 02:24:30,041 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:30] "[32mPOST /video HTTP/1.1[0m" 302 -
+2025-05-03 02:24:30,067 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:30] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:24:30,147 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:24:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:30:24,561 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 02:30:24,561 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:30:28,601 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:28] "GET / HTTP/1.1" 200 -
+2025-05-03 02:30:28,740 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:28] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-03 02:30:29,094 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-03 02:30:38,554 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:38] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:30:38,659 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:30:47,570 - app - INFO - Video POST request received
+2025-05-03 02:30:47,573 - app - WARNING - Empty filename in request
+2025-05-03 02:30:47,575 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:47] "[32mPOST /video HTTP/1.1[0m" 302 -
+2025-05-03 02:30:47,599 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:47] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:30:47,694 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:30:53,126 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:53] "GET /resize HTTP/1.1" 200 -
+2025-05-03 02:30:53,197 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:30:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:31:21,845 - app - INFO - Resize POST request received
+2025-05-03 02:31:21,847 - app - WARNING - Empty filename in request
+2025-05-03 02:31:21,848 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:31:21] "[32mPOST /resize HTTP/1.1[0m" 302 -
+2025-05-03 02:31:22,000 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:31:22] "GET /resize.html HTTP/1.1" 200 -
+2025-05-03 02:31:22,065 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:31:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:31:52,231 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:31:52] "GET /resize HTTP/1.1" 200 -
+2025-05-03 02:31:52,344 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:31:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:33:59,637 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 02:33:59,637 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:34:04,487 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:04] "GET / HTTP/1.1" 200 -
+2025-05-03 02:34:04,767 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:34:08,354 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:08] "GET /resize HTTP/1.1" 200 -
+2025-05-03 02:34:08,478 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:34:21,090 - app - INFO - Resize POST request received
+2025-05-03 02:34:21,144 - app - INFO - Processing image: PHOTO-2024-11-16-21-57-42.jpg
+2025-05-03 02:34:21,145 - app - INFO - Resize parameters: width=800, height=600, format=jpg
+2025-05-03 02:34:21,152 - app - INFO - Image saved temporarily to: uploads/PHOTO-2024-11-16-21-57-42.jpg
+2025-05-03 02:34:21,645 - app - INFO - Image resized to 800x600
+2025-05-03 02:34:21,664 - app - INFO - Image saved to buffer in jpg format
+2025-05-03 02:34:21,664 - app - INFO - Sending file as: PHOTO-2024-11-16-21-57-42_resized.jpg
+2025-05-03 02:34:21,665 - app - INFO - Temporary file cleaned up
+2025-05-03 02:34:21,665 - app - INFO - File sent successfully
+2025-05-03 02:34:21,668 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:21] "POST /resize HTTP/1.1" 200 -
+2025-05-03 02:34:39,460 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:39] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:34:39,559 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:34:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:34:49,837 - app - INFO - Video POST request received
+2025-05-03 02:34:50,186 - app - INFO - Processing video: IMG_0039.MOV
+2025-05-03 02:34:50,186 - app - INFO - FPS parameter: 10
+2025-05-03 02:34:50,310 - app - INFO - Video saved to: uploads/IMG_0039.MOV
+2025-05-03 02:34:50,311 - app - INFO - Output directory created: frames/117359c8-def7-4bb2-b38f-8e48c39e30d1
+2025-05-03 02:34:50,311 - app - INFO - Extracting frames from video
+2025-05-03 02:35:09,945 - app - INFO - Extracted 271 frames
+2025-05-03 02:35:09,945 - app - INFO - Creating ZIP file of frames
+2025-05-03 02:35:14,819 - app - INFO - ZIP file created successfully
+2025-05-03 02:35:14,819 - app - INFO - Sending ZIP file: IMG_0039_frames.zip
+2025-05-03 02:35:14,819 - app - INFO - ZIP file sent successfully
+2025-05-03 02:35:14,819 - app - INFO - Cleaning up temporary files
+2025-05-03 02:35:14,891 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:35:14] "POST /video HTTP/1.1" 200 -
+2025-05-03 02:38:08,927 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:38:08] "GET /interpolate-ui HTTP/1.1" 200 -
+2025-05-03 02:38:09,023 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:38:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:47:38,845 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 02:47:38,845 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:47:41,870 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:47:41] "GET / HTTP/1.1" 200 -
+2025-05-03 02:47:42,047 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:47:42] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-03 02:47:54,955 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:47:54] "GET /resize HTTP/1.1" 200 -
+2025-05-03 02:47:55,101 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:47:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:47:59,948 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:47:59] "GET /upload HTTP/1.1" 200 -
+2025-05-03 02:48:00,036 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:48:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:48:07,844 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:48:07] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:48:07,914 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:48:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:48:12,269 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:48:12] "GET / HTTP/1.1" 200 -
+2025-05-03 02:48:12,354 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:48:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:58:03,349 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 02:58:03,349 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 02:58:08,098 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:58:08] "GET / HTTP/1.1" 200 -
+2025-05-03 02:58:08,390 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:58:08] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-03 02:58:08,653 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:58:08] "GET /static/favicon.svg HTTP/1.1" 200 -
+2025-05-03 02:58:34,318 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:58:34] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 02:58:34,422 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:58:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 02:58:48,539 - app - INFO - Video POST request received
+2025-05-03 02:58:48,899 - app - INFO - Processing video: IMG_0039.MOV
+2025-05-03 02:58:48,899 - app - INFO - FPS parameter: 3
+2025-05-03 02:58:49,045 - app - INFO - Video saved to: uploads/IMG_0039.MOV
+2025-05-03 02:58:49,047 - app - INFO - Output directory created: frames/3870ac0f-6c12-451c-98f3-b9f14a877f3d
+2025-05-03 02:58:49,047 - app - INFO - Extracting frames from video
+2025-05-03 02:59:06,957 - app - INFO - Extracted 80 frames
+2025-05-03 02:59:06,957 - app - INFO - Creating ZIP file of frames
+2025-05-03 02:59:08,463 - app - INFO - ZIP file created successfully
+2025-05-03 02:59:08,464 - app - INFO - Sending ZIP file: IMG_0039_frames.zip
+2025-05-03 02:59:08,464 - app - INFO - ZIP file sent successfully
+2025-05-03 02:59:08,464 - app - INFO - Cleaning up temporary files
+2025-05-03 02:59:08,494 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 02:59:08] "POST /video HTTP/1.1" 200 -
+2025-05-03 03:02:43,156 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 03:02:43,157 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 03:02:50,027 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:02:50] "GET / HTTP/1.1" 200 -
+2025-05-03 03:02:50,308 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:02:50] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-03 03:02:52,486 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:02:52] "GET /resize HTTP/1.1" 200 -
+2025-05-03 03:02:52,594 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:02:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:03:14,598 - app - INFO - Resize POST request received
+2025-05-03 03:03:14,599 - app - INFO - Processing image: ezgif-737bcca82f10a1-removebg-preview.png
+2025-05-03 03:03:14,599 - app - INFO - Resize parameters: width=200, height=200, format=jpg
+2025-05-03 03:03:14,603 - app - INFO - Image saved temporarily to: uploads/ezgif-737bcca82f10a1-removebg-preview.png
+2025-05-03 03:03:14,697 - app - INFO - Image resized to 200x200
+2025-05-03 03:03:14,698 - app - ERROR - Error processing image: cannot write mode RGBA as JPEG
+Traceback (most recent call last):
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/.venv/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 666, in _save
+    rawmode = RAWMODE[im.mode]
+              ~~~~~~~^^^^^^^^^
+KeyError: 'RGBA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/image-processing-site/app.py", line 215, in resize
+    img.save(output_buffer, format='JPEG', quality=95)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/.venv/lib/python3.13/site-packages/PIL/Image.py", line 2581, in save
+    save_handler(self, fp, filename)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/.venv/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 669, in _save
+    raise OSError(msg) from e
+OSError: cannot write mode RGBA as JPEG
+2025-05-03 03:03:14,708 - app - ERROR - Resize error: cannot write mode RGBA as JPEG
+Traceback (most recent call last):
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/.venv/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 666, in _save
+    rawmode = RAWMODE[im.mode]
+              ~~~~~~~^^^^^^^^^
+KeyError: 'RGBA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/image-processing-site/app.py", line 215, in resize
+    img.save(output_buffer, format='JPEG', quality=95)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/.venv/lib/python3.13/site-packages/PIL/Image.py", line 2581, in save
+    save_handler(self, fp, filename)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Disk 1 main/versity/3.2/WebApp/.venv/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 669, in _save
+    raise OSError(msg) from e
+OSError: cannot write mode RGBA as JPEG
+2025-05-03 03:03:14,712 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:03:14] "[32mPOST /resize HTTP/1.1[0m" 302 -
+2025-05-03 03:03:14,742 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:03:14] "GET /resize.html HTTP/1.1" 200 -
+2025-05-03 03:03:14,846 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:03:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:03:25,618 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:03:25] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 03:03:25,718 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:03:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:03:39,750 - app - INFO - Video POST request received
+2025-05-03 03:03:39,752 - app - INFO - Processing video: IMG_0039.MOV
+2025-05-03 03:03:39,752 - app - INFO - FPS parameter: 1
+2025-05-03 03:03:39,969 - app - INFO - Video saved to: uploads/IMG_0039.MOV
+2025-05-03 03:03:39,970 - app - INFO - Output directory created: frames/28ce0607-b444-4b36-b38a-12db14666611
+2025-05-03 03:03:39,970 - app - INFO - Extracting frames from video
+2025-05-03 03:04:00,642 - app - INFO - Extracted 27 frames
+2025-05-03 03:04:00,643 - app - INFO - Creating ZIP file of frames
+2025-05-03 03:04:01,183 - app - INFO - ZIP file created successfully
+2025-05-03 03:04:01,183 - app - INFO - Sending ZIP file: IMG_0039_frames.zip
+2025-05-03 03:04:01,183 - app - INFO - ZIP file sent successfully
+2025-05-03 03:04:01,183 - app - INFO - Cleaning up temporary files
+2025-05-03 03:04:01,198 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:04:01] "POST /video HTTP/1.1" 200 -
+2025-05-03 03:04:09,056 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:04:09] "GET /video-ui HTTP/1.1" 200 -
+2025-05-03 03:04:09,161 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:04:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:04:12,094 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:04:12] "GET /resize HTTP/1.1" 200 -
+2025-05-03 03:04:12,218 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:04:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:04:24,147 - app - INFO - Resize POST request received
+2025-05-03 03:04:24,148 - app - INFO - Processing image: efootball-2023_season3_visual_16-9-1.jpg
+2025-05-03 03:04:24,149 - app - INFO - Resize parameters: width=800, height=600, format=jpg
+2025-05-03 03:04:24,154 - app - INFO - Image saved temporarily to: uploads/efootball-2023_season3_visual_16-9-1.jpg
+2025-05-03 03:04:24,286 - app - INFO - Image resized to 800x600
+2025-05-03 03:04:24,305 - app - INFO - Image saved to buffer in jpg format
+2025-05-03 03:04:24,305 - app - INFO - Sending file as: efootball-2023_season3_visual_16-9-1_resized.jpg
+2025-05-03 03:04:24,306 - app - INFO - Temporary file cleaned up
+2025-05-03 03:04:24,306 - app - INFO - File sent successfully
+2025-05-03 03:04:24,307 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:04:24] "POST /resize HTTP/1.1" 200 -
+2025-05-03 03:09:50,038 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 03:09:50,039 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 03:09:53,384 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:09:53] "GET / HTTP/1.1" 200 -
+2025-05-03 03:09:53,660 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:09:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:10:01,454 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:10:01] "[33mGET /remove-bg HTTP/1.1[0m" 404 -
+2025-05-03 03:10:15,008 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:10:15] "GET / HTTP/1.1" 200 -
+2025-05-03 03:10:15,081 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:10:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:10:17,161 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:10:17] "[33mGET /remove-bg HTTP/1.1[0m" 404 -
+2025-05-03 03:14:06,089 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 03:14:06,090 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 03:14:16,735 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:14:16] "GET / HTTP/1.1" 200 -
+2025-05-03 03:14:17,076 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:14:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:14:20,934 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:14:20] "GET /remove-bg HTTP/1.1" 200 -
+2025-05-03 03:14:21,045 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:14:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:14:50,001 - app - INFO - Background removal POST request received
+2025-05-03 03:14:50,001 - app - INFO - Processing image for background removal: IMG_0057.jpg
+2025-05-03 03:14:50,001 - app - INFO - Background removal parameters: format=png
+2025-05-03 03:14:50,053 - app - INFO - Image saved temporarily to: uploads/IMG_0057.jpg
+2025-05-03 03:14:50,097 - processor - INFO - Processing image for background removal: uploads/IMG_0057.jpg
+2025-05-03 03:16:18,016 - processor - INFO - Background removal completed
+2025-05-03 03:16:21,336 - app - INFO - Background removed successfully
+2025-05-03 03:16:21,336 - app - INFO - Sending file as: IMG_0057_nobg.png
+2025-05-03 03:16:21,338 - app - INFO - Temporary file cleaned up
+2025-05-03 03:16:21,338 - app - INFO - File sent successfully
+2025-05-03 03:16:21,339 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:16:21] "POST /remove-bg HTTP/1.1" 200 -
+2025-05-03 03:19:10,266 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 03:19:10,267 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 03:19:15,576 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:19:15] "GET / HTTP/1.1" 200 -
+2025-05-03 03:19:15,750 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:19:15] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-03 03:19:20,126 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:19:20] "GET /remove-bg HTTP/1.1" 200 -
+2025-05-03 03:19:20,224 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:19:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:19:32,940 - app - INFO - Background removal POST request received
+2025-05-03 03:19:32,940 - app - INFO - Processing image for background removal: IMG_0057.jpg
+2025-05-03 03:19:32,940 - app - INFO - Background removal parameters: format=png
+2025-05-03 03:19:32,947 - app - INFO - Image saved temporarily to: uploads/IMG_0057.jpg
+2025-05-03 03:19:32,993 - processor - INFO - Processing image for background removal: uploads/IMG_0057.jpg
+2025-05-03 03:19:37,258 - processor - INFO - Background removal completed
+2025-05-03 03:19:40,612 - app - INFO - Background removed successfully
+2025-05-03 03:19:40,612 - app - INFO - Sending file as: IMG_0057_nobg.png
+2025-05-03 03:19:40,613 - app - INFO - Temporary file cleaned up
+2025-05-03 03:19:40,613 - app - INFO - File sent successfully
+2025-05-03 03:19:40,620 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:19:40] "POST /remove-bg HTTP/1.1" 200 -
+2025-05-03 03:25:13,624 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.1.111:5050
+2025-05-03 03:25:13,627 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 03:25:19,139 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:25:19] "GET / HTTP/1.1" 200 -
+2025-05-03 03:25:19,255 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:25:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:25:23,296 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:25:23] "GET /remove-bg HTTP/1.1" 200 -
+2025-05-03 03:25:23,438 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:25:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-05-03 03:25:31,048 - app - INFO - Background removal POST request received
+2025-05-03 03:25:31,048 - app - INFO - Processing image for background removal: IMG_0057.jpg
+2025-05-03 03:25:31,049 - app - INFO - Background removal parameters: format=png
+2025-05-03 03:25:31,054 - app - INFO - Image saved temporarily to: uploads/IMG_0057.jpg
+2025-05-03 03:25:32,223 - processor - INFO - Processing image for background removal: uploads/IMG_0057.jpg
+2025-05-03 03:25:37,011 - processor - INFO - Background removal completed
+2025-05-03 03:25:40,034 - app - INFO - Background removed successfully
+2025-05-03 03:25:40,034 - app - INFO - Sending file as: IMG_0057_nobg.png
+2025-05-03 03:25:40,035 - app - INFO - Temporary file cleaned up
+2025-05-03 03:25:40,035 - app - INFO - File sent successfully
+2025-05-03 03:25:40,038 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 03:25:40] "POST /remove-bg HTTP/1.1" 200 -

@@ -1,8 +1,17 @@
 # pip install -r requirements.txt
-flask
-pillow
-pillow-heif
-python-dotenv
-opencv-python-headless
-flask-wtf
-numpy
+# Web framework
+Flask==2.3.3
+Flask-WTF==1.2.1
+Werkzeug==2.3.7
+
+# Image processing
+Pillow==11.2.1
+pillow-heif==0.15.0
+rembg==2.0.65
+onnxruntime==1.17.0
+
+# Video processing
+opencv-python-headless==4.11.0.86
+
+# Utils
+python-dotenv==1.0.1
